@@ -1,8 +1,7 @@
 try:
-    from .mosaic_creator import MosaicCreator, MosaicDetector
+    from .mosaic import MosaicCreator, MosaicDetector
 except ImportError:
-    # Fallback for direct execution
-    from mosaic_creator import MosaicCreator, MosaicDetector
+    from mosaic import MosaicCreator, MosaicDetector
 
 NODE_CLASS_MAPPINGS = {
     "MosaicCreator": MosaicCreator,

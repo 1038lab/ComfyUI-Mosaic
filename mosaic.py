@@ -267,12 +267,7 @@ class MosaicCreator:
 
             return (final_image, output_mask)
 
-        except Exception as e:
-            print(f"Error in MosaicCreator: {str(e)}")
-            import traceback
-            traceback.print_exc()
-
-            # Return original image on error
+        except Exception:
             if mask is not None:
                 return (image, mask)
             else:
@@ -370,8 +365,7 @@ class MosaicDetector:
 
             return (final_images, final_overlays, final_masks)
 
-        except Exception as e:
-            print(f"Error in MosaicDetector: {str(e)}")
+        except Exception:
             error_mask = torch.zeros((image.shape[0], image.shape[1], image.shape[2]), dtype=torch.float32)
             return (image, image, error_mask)
 

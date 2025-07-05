@@ -1,0 +1,15 @@
+[project]
+name = "ComfyUI-Mosaic"
+description = "ComfyUI custom nodes for mosaic detection and creation."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+dependencies = ["torch>=1.9.0", "torch>=1.9.0", "torchvision>=0.10.0", "opencv-python>=4.5.0", "pillow>=8.0.0", "numpy>=1.21.0"]
+    
+[project.urls]
+Repository = "https://github.com/1038lab/ComfyUI-Mosaic"
+
+[tool.comfy]
+PublisherId = "ailab"
+DisplayName = "ComfyUI-Mosaic"
+Icon = ""
